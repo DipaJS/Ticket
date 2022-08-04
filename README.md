@@ -3,7 +3,7 @@ Last thing I did not have time with, is to use the
    as well as "Special" cases, the latter being with t containing
    string such as "Crash, Important, Failure".
    This is to avoid changing the code, as well as to 
-   avoid repeatition. By utilizing the Open-closed
+   avoid repetition. By utilizing the Open-closed
    principle we don't have to be worried about any modification
    being made on the method, as well as being able to continously add
    different and more methods to raise the priority, with different

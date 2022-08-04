@@ -1,28 +1,18 @@
-# Refactoring Test
+Last thing I did not have time with, is to use the
+   Open-closed principle, for the PriorityRaise on the "Default"
+   as well as "Special" cases, the latter being with t containing
+   string such as "Crash, Important, Failure".
+   This is to avoid changing the code, as well as to 
+   avoid repeatition. By utilizing the Open-closed
+   principle we don't have to be worried about any modification
+   being made on the method, as well as being able to continously add
+   different and more methods to raise the priority, with different
+   arguments.
 
-## Assignment
-You work within a team and are assigned a ticket created by the product owner as part of your sprint work.
-The ticket says:
-
----
-
-### Refactor Ticket Service
-The ticket service functionally works well and the function and logic of it must not change. However it requires refactoring to improve readability, maintainability and testability.
-When refactoring, focus on applying clean code principles. The final result should be something ready to merge into the next release of the product and meets the definition of done.
-You are free to define the definition of done for yourself.
-Keep in mind principles such as **SOLID**, **KISS**, **DRY** and **YAGNI**.
-
-#### Limitations
-Due to dependencies in other areas of the larger product, there are a few limitations that must be followed during the refactoring:
-
-1. The contents of Program.cs cannot change at all including using statements.
-2. The method signatures in the repositories cannot change
-
----
-
-Please submit your refactored code to us via a method of your choice (repository link, cloud share, zip file, etc.) prior to an interview to allow us to review it.
-Note that while you can clone this repository, you cannot create a branch or commit any code to the repository. It is read only.
-
-Try to limit time spent on this exercise to a maximum of 2 hours. If there is anything you don't have time to complete, write it down and we can discuss it during the interview.
-
-Good Luck!
+   I did create an interface "IPriorityRaise" which the class:"DefaultPriority, SpecialPriority"
+   is inheriting from, and to further extend functionality. In this case
+   to act as the "Default" and "Special" cases in the TicketService class.
+   However, to be able to add more and different PriorityRaises, the
+   program needs to know which one to use, which the "PriorityRaiseHandler"
+   is there for, to act as a "chooser" to pick what kind of PriorityRaise
+   function to use, and when. 

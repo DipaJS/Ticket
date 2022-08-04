@@ -15,4 +15,4 @@ Last thing I did not have time with, is to use the
    However, to be able to add more and different PriorityRaises, the
    program needs to know which one to use, which the "PriorityRaiseHandler"
    is there for, to act as a "chooser" to pick what kind of PriorityRaise
-   function to use, and when. 
+   function to use, and when. However, this class was never finished.
